@@ -107,6 +107,9 @@ h3 {
   color: white;
   text-align: center;
 }
+h4 {
+  color: white;
+}
 </style>
 <!--/animated-css-->
 </head>
@@ -125,7 +128,7 @@ h3 {
          <ul>
           <li class="active"><a href="index.html">Home</a></li>
          <li><a class="scroll" href="#contact">Contact</a></li>
-         <li><a class="" href="login2.html">Login </a></li>
+         
          </ul>
        </div>
         <!-- script-for-menu -->
@@ -154,10 +157,10 @@ h3 {
 
 
                      <form method="post" action="cart.php?action=add&id=<?php echo $row["slno"]; ?>">
-                          <div style="border:1px solid #333; background-color:crimson; border-radius:5px; padding:16px;" align="center">
-                              <center><h4 class="text-info"><?php echo $row["item_name"]; ?></h4></center>
-                               <center><h4 class="text-danger">Rs. <?php echo $row["price"]; ?></h4></center>
-                               <center><input type="text" name="quantity" class="form-control" value="1" /></center>
+                          <div style="border:1px solid white; background-color:rgba(100,150,100,0.9); border-radius:5px; padding:16px;" align="center">
+                              <center><h4 class="text-info" ><?php echo $row["item_name"]; ?></h4></center>
+                               <center><h4 class="text-danger">Rs. <?php echo $row["item_price"]; ?></h4></center>
+                               <center><input type="number" name="quantity" class="form-control" value="1" /></center>
                                <center><input type="hidden" name="hidden_name" value="<?php echo $row["item_name"]; ?>" /></center>
                                <center><input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" /></center>
                                <center><input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  </center>
